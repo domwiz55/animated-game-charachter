@@ -1,0 +1,21 @@
+// animatedGameCharacter()
+// This function creates an animated game character.
+// Parameters:
+//   x: The x coordinate of the character's starting position.
+//   y: The y coordinate of the character's starting position.
+//   speed: The speed of the character's movement.
+//   sprite: The sprite image of the character.
+// Returns:
+//   An object representing the animated game character.
+function animatedGameCharacter(x, y, speed, sprite) {
+  return {
+    x: x,
+    y: y,
+    speed: speed,
+    sprite: sprite,
+    move: function(x, y) {
+      this.x += x * this.speed;
+      this.y += y * this.speed;
+    }
+  };
+}
